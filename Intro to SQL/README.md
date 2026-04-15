@@ -1,7 +1,7 @@
 # Introduction to SQL and Relational Databases
-### GDSS Workshop — Day 1
+### GDSS Workshop — Day 2
 
-This folder contains all materials for Day 1 of the GDSS SQL workshop. The session runs for 3 hours and covers the foundations of relational databases and SQL using PostgreSQL. It is designed to flow directly into Day 2: *Data Transformation, Manipulation and Preparation in SQL*.
+This folder contains all materials for Day 1 of the GDSS SQL workshop. The session runs for 3 hours and covers the foundations of relational databases and SQL using PostgreSQL. It is designed to flow directly into Day 2: *Data Transformation, Manipulation, and Preparation in SQL*.
 
 ---
 
@@ -11,7 +11,7 @@ This folder contains all materials for Day 1 of the GDSS SQL workshop. The sessi
 |---|---|
 | `shopdb_workshop.sql` | Complete SQL script for the session — table setup, all teaching queries, exercises, and Day 2 preview queries |
 | `SQL_Session_Outline.docx` | Detailed session outline with timings, module breakdown, and learning outcomes |
-| `SQL_Facilitator_Script.docx` | Word-for-word facilitator script including spoken dialogue, code blocks, exercise answer keys, and facilitator notes |
+| `SQL_Facilitation_Presentation.ppts` | Facilitation PowerPoint presentation slides including basic definitions, exercises, and facilitation notes |
 | `README.md` | This file |
 
 ---
@@ -20,7 +20,7 @@ This folder contains all materials for Day 1 of the GDSS SQL workshop. The sessi
 
 **Duration:** 3 hours  
 **Level:** Beginner  
-**Tool:** PostgreSQL 16 (pgAdmin)  
+**Tool:** PostgreSQL 18 (pgAdmin)  
 **Database:** `shopdb` — a fictional e-commerce store with 4 tables
 
 | Time | Module |
@@ -44,10 +44,10 @@ The SQL script creates a database called `shopdb` with four tables:
 customers ──< orders ──< order_items >── products
 ```
 
-- **customers** — 8 rows, one per registered customer
-- **products** — 10 rows, spanning Electronics, Accessories, and Furniture
-- **orders** — 12 rows with statuses: pending, shipped, delivered, cancelled
-- **order_items** — 17 rows linking orders to products (many-to-many)
+- **customers** — registered customers
+- **products** — spanning Electronics, Accessories, and Furniture
+- **orders** — orders with statuses: pending, shipped, delivered, cancelled
+- **order_items** — linking orders to products (many-to-many)
 
 ---
 
@@ -73,9 +73,9 @@ By the end of this session, participants will be able to:
 - Explain the difference between primary keys and foreign keys
 - Understand why NULL is not the same as zero or an empty string
 - Write `SELECT` queries with `WHERE`, `ORDER BY`, `LIMIT`, and `OFFSET`
-- Filter data using `=`, `!=`, `>`, `<`, `BETWEEN`, `IN`, `LIKE`, `ILIKE`, `IS NULL`
+- Filter data using `=`, `!=`, `>`, `<`, `BETWEEN`, `IN`, `LIKE`, `ILIKE`, `IS NULL.`
 - Combine filter conditions with `AND`, `OR`, and parentheses
-- Remove duplicate results using `DISTINCT`
+- Remove duplicate results using `DISTINCT.`
 - Rename columns and tables using aliases (`AS`)
 - Write well-formatted, commented SQL
 - Understand that SQL syntax varies across platforms (PostgreSQL, MySQL, BigQuery)
@@ -94,16 +94,7 @@ No prior SQL knowledge is required. Participants should have:
 
 ## Connection to Day 2
 
-This session is designed to hand off cleanly to Day 2: *Data Transformation, Manipulation and Preparation in SQL*. The same `shopdb` database is used in Day 2. By the end of Day 1, participants will have the schema knowledge and query foundations that Day 2 builds on directly — particularly for joining tables, casting data types, and aggregating results.
-
----
-
-## Facilitator Notes
-
-- The `.docx` facilitator script contains word-for-word spoken dialogue, not just bullet points. Adapt the language to your own voice.
-- All exercises have answer keys embedded in the script in clearly labelled `FACILITATOR NOTE` boxes.
-- The SQL file is safe to re-run at any time — `DROP TABLE IF EXISTS` at the top resets everything cleanly.
-- Constraint-breaking examples in Part 3 are commented out by default so they do not disrupt a full-file run. Uncomment them deliberately during the session to demonstrate error messages.
+This session is designed to hand off cleanly to Day 2: *Data Transformation, Manipulation, and Preparation in SQL*. The same `shopdb` database is used in Day 2. By the end of Day 1, participants will have the schema knowledge and query foundations that Day 2 builds on directly — particularly for joining tables, casting data types, and aggregating results.
 
 ---
 
